@@ -111,7 +111,7 @@ void Dsp::clear_state_f_static(PluginLV2 *p)
 
 inline void Dsp::init(uint32_t RsamplingFreq)
 {
-	samplingFreq = 8 * RsamplingFreq;
+	samplingFreq = 2 * RsamplingFreq;
 	smp.setup(RsamplingFreq, samplingFreq);
 	fSamplingFreq = samplingFreq;
 	fConst0 = double(min(1.92e+05, max(1.0, (double)fSamplingFreq)));
